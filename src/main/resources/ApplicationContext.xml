@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+	<bean id="inventory" class="com.spring.beans.Inventory">
+      <property name="inventoryMap">
+      	<map>
+      		<entry key="IPAD" value-ref="IpadDetails"/>
+      		<entry key="IPHONE" value-ref="IphoneDetails"/>
+      	</map>
+      </property>    
+	</bean>
+	
+	<bean id="IpadDetails" class="com.spring.beans.ItemDetails">
+		<property name="price" value="25000"/>
+		<property name="quantity" value="50"/>
+	</bean>
+	
+	<bean id="IphoneDetails" class="com.spring.beans.ItemDetails">
+		<property name="price" value="30000"/>
+		<property name="quantity" value="50"/>
+	</bean>
+ 
+</beans>
