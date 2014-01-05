@@ -14,14 +14,4 @@ public class Inventory {
 		this.inventoryMap = inventoryMap;
 	}
 	
-	public void printItems(Map<String, ItemDetails> inventory){
-		
-		System.out.println("Name - Price - Quantity");
-		for(Map.Entry<String, ItemDetails> entry : inventory.entrySet()){
-			System.out.println(entry.getKey()+" - "+entry.getValue().getPrice()+" - "+entry.getValue().getQuantity());
-		}
-	}
-	
-	
-	
 }
